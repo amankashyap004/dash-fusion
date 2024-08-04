@@ -62,7 +62,7 @@ const Dashboard: React.FC = () => {
           </p>
         </div>
       </section>
-      <section className="w-full py-24 lg:ps-28 px-4 overflow-y-scroll">
+      <section className="w-full py-24 lg:ps-28 px-4">
         {renderContent()}
       </section>
     </div>
