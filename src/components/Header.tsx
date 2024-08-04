@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="flex p-4 w-full bg-gray-900">
+    <header className="flex p-4 w-full bg-gray-900 z-50 fixed top-0">
       {isSidebarOpen && (
         <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
       )}
