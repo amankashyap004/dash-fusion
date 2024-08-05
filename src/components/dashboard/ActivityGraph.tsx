@@ -66,7 +66,11 @@ const monthData = {
   ],
 };
 
-const ActivityGraph: React.FC = () => {
+interface ActivityGraphProps {
+  height: any;
+}
+
+const ActivityGraph: React.FC<ActivityGraphProps> = ({ height }) => {
   const [timeRange, setTimeRange] = useState<string>("day");
 
   const getData = () => {
@@ -83,7 +87,7 @@ const ActivityGraph: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-full gap-2 bg-gray-800 p-2 lg:p-4 rounded-lg shadow-md ">
+    <div className="flex flex-col w-full gap-2 bg-gray-800 p-2 lg:p-4 rounded-lg shadow-md">
       <div className="flex justify-between items-center">
         <h2 className="text-xl lg:text-2xl font-bold">Activity</h2>
         <div>
@@ -98,9 +102,9 @@ const ActivityGraph: React.FC = () => {
           </select>
         </div>
       </div>
-    <div className="lg:h-72">
-    <Bar data={getData()} />
-    </div>
+      <div className={`${height}`}>
+        <Bar data={getData()} />
+      </div>
     </div>
   );
 };

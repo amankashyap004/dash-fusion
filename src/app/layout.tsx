@@ -11,8 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "DashFusion",
-  description: "DashFusion",
+  title: "Dash Fusion",
+  description:
+    "Dash Fusion is a responsive dashboard application with features like user management, analytics, and order tracking. It offers a clean interface and is highly customizable for various applications.",
 };
 
 export default function RootLayout({

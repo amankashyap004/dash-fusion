@@ -21,7 +21,7 @@ const DashboardHome: React.FC = () => {
           <NetProfit />
         </section>
         <section className="col-span-1 lg:col-span-5">
-          <ActivityGraph />
+          <ActivityGraph height="lg:h-72" />
         </section>
         <section className="col-span-1 lg:col-span-2">
           <DashboardSummary />

@@ -7,18 +7,24 @@ import { VscGraph } from "react-icons/vsc";
 import { AiFillCarryOut } from "react-icons/ai";
 
 import DashboardHome from "./DashboardHome";
+import ActivityGraph from "./ActivityGraph";
+import RecentOrders from "./RecentOrders";
 
 const tabs = [
   { icon: <IoMdHome />, label: "Home", content: <DashboardHome /> },
   {
     icon: <VscGraph />,
     label: "Graph",
-    content: "Graph page update coming soon..",
+    content: (
+      <div className="flex justify-center items-center w-full h-full">
+        <ActivityGraph height="h-full lg:h-[500px]" />
+      </div>
+    ),
   },
   {
     icon: <AiFillCarryOut />,
     label: "Carry Out",
-    content: "Page update coming soon..",
+    content: <RecentOrders />,
   },
   {
     icon: <IoMdWallet />,
@@ -42,7 +48,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="relative lg:flex lg:justify-start lg:items-start w-full gap-4 h-screen">
-      <section className="fixed bottom-0 lg:left-0 flex flex-row lg:flex-col justify-start items-start gap-4 lg:pt-24 w-full lg:w-20 lg:h-full bg-gray-900">
+      <section className="fixed bottom-0 lg:left-0 flex flex-row lg:flex-col justify-start items-start gap-4 lg:pt-24 w-full lg:w-20 lg:h-full bg-gray-900 z-30">
         {tabs.map((tab) => (
           <div
             key={tab.label}
